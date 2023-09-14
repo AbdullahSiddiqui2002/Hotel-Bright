@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name="description" content="Share your valuable feedback with Hotel Bright. Your opinions matter to us! Use our feedback form to let us know how we can make your stay even more enjoyable. We're here to listen and improve your experience.">
+<title>Feedback Form - Hotel Bright</title>
+<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin=anonymous referrerpolicy=no-referrer>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{background-image:url("./images/gallery/gallery-5.jpg");background-repeat:no-repeat;background-attachment:fixed;background-size:100% 100vh;color:#fdf9f9;display:flex}.contact-section{background-color:#000;opacity:.9;margin-bottom:50px}h2{font-size:40px}p{font-size:18px}button{background-color:#5ba317!important}button:hover{background-color:#75c22d!important}</style>
+</head>
+<body>
+<main class=container>
+<section class=contact-section>
+<div class="d-flex align-items-center justify-content-center my-2">
+<a href=./index.html><img class=img-fluid src=./images/logo2.png alt=""></a>
+</div>
+<div class="container my-5">
+<div class=row>
+<h2 class=text-center>Contact Us</h2>
+<div class=col-md-12>
+<p class=text-center>If you have any questions or inquiries, feel free to get in touch with us.</p>
+<form id=contact-form>
+<div class=form-group>
+<input class="form-control my-3" id=name placeholder="Enter Your Name">
+</div>
+<div class=form-group>
+<input class="form-control my-3" id=email placeholder="Enter Your Email">
+</div>
+<div class=form-group>
+<input class="form-control my-3" id=phone placeholder="Enter Your phone">
+</div>
+<div class=form-group>
+<textarea class="form-control my-3" id=message rows=8 placeholder="Your Message"></textarea>
+</div>
+<button type=submit class="btn w-100 fs-5 my-3 text-light fw-bold">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script src=https://code.jquery.com/jquery-3.7.0.min.js integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js integrity=sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/sweetalert2@10></script>
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js integrity=sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+<script>$("#contact-form").submit((function(t){t.preventDefault();let e=$("#name").val(),r=$("#email").val(),o=$("#message").val(),i=$("#phone").val();if(""===e.trim()||""===r.trim()||""===o.trim()||""===i.trim())return void Swal.fire({title:"Error",text:"Please fill in all fields",icon:"error",confirmButtonColor:"danger",confirmButtonText:"Ok"});if(!/^[a-zA-Z\s]+$/.test(e))return void Swal.fire({title:"Error",text:"Please enter a valid name",icon:"error",confirmButtonColor:"#f27474",confirmButtonText:"Ok"});if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r))return void Swal.fire({title:"Error",text:"Please enter a valid email address",icon:"error",confirmButtonColor:"#f27474",confirmButtonText:"Ok"});if(!/^[0-9]{11}$/.test(i))return void Swal.fire({title:"Error",text:"Please enter a valid 11-digit phone number",icon:"error",confirmButtonColor:"#f27474",confirmButtonText:"Ok"});if(""===o)return void Swal.fire({title:"Error",text:"Please enter a message",icon:"error",confirmButtonColor:"#f27474",confirmButtonText:"Ok"});let n={name:e,email:r,message:o,phone:i};localStorage.setItem("contactFormData",JSON.stringify(n)),Swal.fire({title:"Thank You "+e+" For Contacting Us ",text:"We will reply you within 24 hours",icon:"info",confirmButtonColor:"lightgreen",confirmButtonText:"Ok"})}))</script>
+</body>
+</html>
