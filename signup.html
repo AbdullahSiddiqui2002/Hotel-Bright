@@ -3,7 +3,7 @@
 <head>
 <meta charset=UTF-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name="description" content="Join Hotel Bright's exclusive community. Sign up now to access special offers, discounts, and personalized experiences. Start your journey with us today!">
+<meta name=description content="Join Hotel Bright's exclusive community. Sign up now to access special offers, discounts, and personalized experiences. Start your journey with us today!">
 <title>Hotel Bright - Signup</title>
 <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
@@ -32,6 +32,7 @@
 <div class=form-group>
 <label for=password>Password</label>
 <input type=password class=form-control id=password name=password>
+<span>At least 8 characters long and contain at least one lowercase letter, one uppercase letter, one digit, and one special character</span>
 </div>
 <div class=form-group>
 <label for=confirm-password>Confirm Password</label>
@@ -46,6 +47,6 @@
 <script src=https://code.jquery.com/jquery-3.5.1.min.js></script>
 <script src=https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js></script>
-<script>$(document).ready((function(){$("#signup-form").submit((function(e){if(e.preventDefault(),function(){let e=$("#username").val(),r=$("#email").val(),a=$("#password").val(),s=$("#confirm-password").val();return e&&r&&a&&s?e.match(/^[a-zA-Z0-9_]+$/)?r.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)?a.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z\d]).{8,}$/)?a===s||(swal("Error","Passwords do not match.","error"),!1):(swal("Error","Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, one digit, and one special character.","error"),!1):(swal("Error","Please enter a valid email address.","error"),!1):(swal("Error","Username can only contain letters, numbers, and underscores.","error"),!1):(swal("Error","Please fill in all fields.","error"),!1)}()){var r;let e;r={username:$("#username").val(),email:$("#email").val(),password:$("#password").val()},(e=JSON.parse(localStorage.getItem("users"))||[]).push(r),localStorage.setItem("users",JSON.stringify(e)),swal("Success","Signup successful! User information saved.","success").then((()=>{window.location.href="./login.html"})),$("#signup-form")[0].reset()}}))}))</script>
+<script>$(document).ready((function(){$("#signup-form").submit((function(e){let a,r,s,l;if(e.preventDefault(),a=$("#username").val(),r=$("#email").val(),s=$("#password").val(),l=$("#confirm-password").val(),a&&r&&s&&l?a.match(/^[a-zA-Z0-9_]+$/)?r.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)?s.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z\d]).{8,}$/)?s===l||(swal("Error","Passwords do not match.","error"),0):(swal("Error","Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, one digit, and one special character.","error"),0):(swal("Error","Please enter a valid email address.","error"),0):(swal("Error","Username can only contain letters, numbers, and underscores.","error"),0):(swal("Error","Please fill in all fields.","error"),0)){var o;let e;o={username:$("#username").val(),email:$("#email").val(),password:$("#password").val()},(e=JSON.parse(localStorage.getItem("users"))||[]).push(o),localStorage.setItem("users",JSON.stringify(e)),swal("Success","Signup successful! User information saved.","success").then((()=>{window.location.href="./login.html"})),$("#signup-form")[0].reset()}}))}))</script>
 </body>
 </html>

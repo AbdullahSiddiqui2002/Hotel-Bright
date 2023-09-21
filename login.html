@@ -3,7 +3,7 @@
 <head>
 <meta charset=UTF-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name="description" content="Welcome back to Hotel Bright! Log in to access your account, manage bookings, and enjoy a seamless experience. Your comfort is just a login away.">
+<meta name=description content="Welcome back to Hotel Bright! Log in to access your account, manage bookings, and enjoy a seamless experience. Your comfort is just a login away.">
 <title>Hotel Bright - Login</title>
 <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
@@ -38,6 +38,6 @@
 <script src=https://code.jquery.com/jquery-3.5.1.min.js></script>
 <script src=https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js></script>
-<script>$(document).ready((function(){$("#login-form").submit((function(e){if(e.preventDefault(),function(){let e=$("#login-email").val(),l=$("#login-password").val();return!!e&&!!l||(swal("Error","Please fill in both email and password.","error"),!1)}()){let e=$("#login-email").val(),l=$("#login-password").val(),o=(JSON.parse(localStorage.getItem("users"))||[]).find((o=>o.email===e&&o.password===l));o?(swal("Success","Login successful!","success").then((()=>{window.location.href="./index.html"})),$("#login-form")[0].reset()):swal("Error","Invalid email or password. Please try again.","error")}}))}))</script>
+<script>$(document).ready((function(){$("#login-form").submit((function(e){let l,a;if(e.preventDefault(),l=$("#login-email").val(),a=$("#login-password").val(),l&&a||(swal("Error","Please fill in both email and password.","error"),0)){let e=$("#login-email").val(),l=$("#login-password").val();(JSON.parse(localStorage.getItem("users"))||[]).find((a=>a.email===e&&a.password===l))?(swal("Success","Login successful!","success").then((()=>{localStorage.setItem("status","loggedIn"),window.location.href="./index.html"})),$("#login-form")[0].reset()):swal("Error","Invalid email or password. Please try again.","error")}}))}))</script>
 </body>
 </html>
